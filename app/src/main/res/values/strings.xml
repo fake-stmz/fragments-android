@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">fragments</string>
+    <string name="app_name">Медиа приложение</string>
+    <string name="photos_button">📸 Фото</string>
+    <string name="video_button">🎬 Видео</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
