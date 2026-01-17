@@ -2,6 +2,14 @@
     <string name="app_name">Медиа приложение</string>
     <string name="photos_button">📸 Фото</string>
     <string name="video_button">🎬 Видео</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gallery">📸 Галерея фото</string>
+    <string name="photo_count">Фото 1 из 10</string>
+    <string name="next_photo_button">Следующее фото</string>
+    <string name="info_button">Информация</string>
+    <string name="video_player">🎬 Видео-плеер</string>
+    <string name="video_name">Демо видео</string>
+    <string name="video_status">Готово к воспроизведению</string>
+    <string name="start_video">Воспроизвести</string>
+    <string name="pause_video">Пауза</string>
+    <string name="stop_video">Стоп</string>
 </resources>
