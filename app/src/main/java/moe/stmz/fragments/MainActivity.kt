@@ -8,11 +8,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var photoButton: Button
-    private lateinit var videoButton: Button
-    private var currentFragment: Fragment = PhotoFragment()
+
+    lateinit var bottomNav : BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,29 +24,27 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        photoButton = findViewById(R.id.photo_button)
-        videoButton = findViewById(R.id.video_button)
-
-        photoButton.setOnClickListener {
-            if (currentFragment !is PhotoFragment) {
-                loadFragment(PhotoFragment(), "photos")
-                photoButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.accent)
-                videoButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.mute)
-            }
-        }
-
-        videoButton.setOnClickListener {
-            if (currentFragment is PhotoFragment) {
-                loadFragment(VideoFragment(), "videos")
-                videoButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.accent)
-                photoButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.mute)
+        bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+        bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.photo -> {
+                    loadFragment(PhotoFragment(), "photo")
+                    true
+                }
+                R.id.video -> {
+                    loadFragment(VideoFragment(), "video")
+                    true
+                }
+                R.id.audio -> {
+                    loadFragment(AudioFragment(), "audio")
+                    true
+                }
+                else -> false
             }
         }
     }
 
     private fun loadFragment(fragment: Fragment, tag: String) {
-        currentFragment = fragment
-
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment, tag)
             .addToBackStack(tag)
