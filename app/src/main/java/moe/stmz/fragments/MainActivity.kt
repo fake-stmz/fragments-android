@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(AudioFragment(), "audio")
                     true
                 }
-                else -> false
             }
+            true
         }
     }
 

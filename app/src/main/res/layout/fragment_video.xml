@@ -54,7 +54,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
-                android:text="@string/start_video" />
+                android:text="@string/start" />
 
             <Button
                 android:id="@+id/button5"
@@ -63,7 +63,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF9800"
-                android:text="@string/pause_video" />
+                android:text="@string/pause" />
 
             <Button
                 android:id="@+id/button6"

@@ -10,9 +10,11 @@
     <string name="video_player">🎬 Видео-плеер</string>
     <string name="video_name">Демо видео</string>
     <string name="video_status">Готово к воспроизведению</string>
-    <string name="start_video">Воспроизвести</string>
-    <string name="pause_video">Пауза</string>
+    <string name="start">Воспроизвести</string>
+    <string name="pause">Пауза</string>
     <string name="stop_video">Стоп</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="audio_player">🎵 Аудио-плеер</string>
+    <string name="audio_name">Название аудио-файла</string>
+    <string name="duration">0:00 / 1:14</string>
+    <string name="next_audio_button">Следующее аудио</string>
 </resources>
